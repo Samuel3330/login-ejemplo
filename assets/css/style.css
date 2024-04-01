@@ -1,0 +1,120 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(../img/login-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email,
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+}
+
+.title h1 {
+  color: white;
+  font-size: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+}
+
+.form {
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+.email label,
+.password label,
+.remember label,
+.footer p {
+  color: white;
+  font-size: 13px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.login__input {
+  outline: none;
+  background: transparent;
+  border: none;
+  color: white;
+  z-index: 10;
+}
+
+.submit button {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+  color: rgb(34, 34, 34);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.links a,
+.footer a {
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.links,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.email,
+.password {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+
+.email label,
+.password label {
+  position: absolute;
+  top: 10px;
+  transition: 0.5s;
+}
+
+.email .login__input:focus + label,
+.password .login__input:focus + label {
+  top: -10px;
+  font-size: 12px;
+}
